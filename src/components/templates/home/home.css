@@ -68,7 +68,7 @@ p {
     height: 100%;
     position: relative;
     width: 150px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .btns_more {
@@ -117,8 +117,8 @@ p {
     border-radius: 4em;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     opacity: 0;
     transition: all 0.5s;
     box-shadow: 0 0 10px 40px white;
