@@ -1,3 +1,4 @@
+import SearchBox from "./searchbox"
 export const Planning = () =>{
-    return <div>Planning</div>
+    return <SearchBox/>
 }
