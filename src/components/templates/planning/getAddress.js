@@ -1,16 +1,16 @@
-const map = require('@google/maps').createClient({
-    key: "AIzaSyDb0JylAh2lmanpChp9pCFmdeA4Fpajrr4",
-  });
-  
 async function GetAddress(address){
-    //var service = new google.maps.Geocoder();
-    const addressList = await map.geocode(
+    const google = window.google;
+    let service = new google.maps.Geocoder();
+    let response =  await service.geocode(
         {
           'address': address,
         },
         callback
     );
-    console.log(addressList);
+    let addressList = [];
+    for (var i = 0; i < response.results.length; i++) {
+        addressList.push(response.results[i].formatted_address);
+    }
     return addressList;
     function callback(results, status){
         if (status != "OK"){
