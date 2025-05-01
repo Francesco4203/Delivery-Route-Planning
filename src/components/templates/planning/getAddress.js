@@ -17,5 +17,6 @@ async function GetAddress(address){
             console.log("Get address failed due to " + status);
         }
     }
+    
 }
 export default GetAddress;
